@@ -1,0 +1,221 @@
+# =============================================================================
+# .gitignore — paranoid by default
+# =============================================================================
+# Deze repo pusht naar een publieke GitHub Pages-site. Standaard wordt alles
+# wat op credentials, prive-data, of niet-publieke documenten lijkt geblokt.
+#
+# Whitelist-principe: voeg uitzonderingen toe via `!pattern`, niet door
+# regels te verwijderen. Bij twijfel: niet committen.
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# Credentials, secrets, API-keys, tokens
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.env
+*.env.local
+.envrc
+secret
+secrets
+secret/
+secrets/
+.secret
+.secrets
+.secret/
+.secrets/
+secret.*
+*.secret
+*.secrets
+credentials
+credentials.*
+*credentials*
+service-account*
+service_account*
+*-key.json
+*_key.json
+*.pem
+*.key
+*.cer
+*.crt
+*.p12
+*.pfx
+*.jks
+*.keystore
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+id_ecdsa
+id_ecdsa.*
+*.gpg
+*.asc
+*.kdbx
+.netrc
+.npmrc
+.pypirc
+.pip/pip.conf
+*token*
+*tokens*
+*.token
+api_key*
+api-key*
+apikey*
+*.apikey
+auth.json
+.auth
+.htpasswd
+config.local.*
+local.config.*
+local-settings.*
+local_settings.*
+settings.local.*
+
+# -----------------------------------------------------------------------------
+# SSH / GPG / cloud / IaC state
+# -----------------------------------------------------------------------------
+.ssh/
+.aws/
+.gnupg/
+.azure/
+.gcloud/
+.gcp/
+.kube/
+.docker/config.json
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+
+# -----------------------------------------------------------------------------
+# Prive / lokaal-only data
+# -----------------------------------------------------------------------------
+personal/
+private/
+priv/
+private-*
+*-private
+*.private
+*.priv
+private-data/
+personal-data/
+
+# -----------------------------------------------------------------------------
+# AI / agent state
+# -----------------------------------------------------------------------------
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+.cursor/
+.aider*
+.continue/
+GEMINI.md
+AGENTS.md
+
+# -----------------------------------------------------------------------------
+# Office documenten — standaard blocken om per ongeluk uploaden te voorkomen.
+# Whitelist een specifiek bestand expliciet via `!naam.pdf` als nodig.
+# -----------------------------------------------------------------------------
+*.pdf
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.xlsm
+*.pptx
+*.ppt
+*.msg
+*.eml
+
+# -----------------------------------------------------------------------------
+# Project-specifiek
+# -----------------------------------------------------------------------------
+_download-*.py
+_test-*
+
+# -----------------------------------------------------------------------------
+# Backups, temp, lock-bestanden
+# -----------------------------------------------------------------------------
+*.bak
+*.backup
+*.old
+*.orig
+*.swp
+*.swo
+*~
+*.tmp
+*.temp
+.~lock.*
+~$*
+
+# -----------------------------------------------------------------------------
+# Logs
+# -----------------------------------------------------------------------------
+*.log
+logs/
+log/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# -----------------------------------------------------------------------------
+# Build / dependencies
+# -----------------------------------------------------------------------------
+node_modules/
+bower_components/
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.turbo/
+.svelte-kit/
+.vercel/
+.netlify/
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.venv/
+venv/
+env/
+.env/
+.mypy_cache/
+.ruff_cache/
+
+# -----------------------------------------------------------------------------
+# Editors / IDE
+# -----------------------------------------------------------------------------
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.history/
+*.iml
+
+# -----------------------------------------------------------------------------
+# OS
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
